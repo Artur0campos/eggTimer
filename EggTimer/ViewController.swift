@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBAction func hardnessSelected(_ sender: UIButton) {
+        indentify(nome: sender.currentTitle!)
+    }
+    
 
-
+}
+func indentify(nome: String){
+    print(nome)
 }
