@@ -10,12 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let softTime = 5
+    let medium = 7
+    let hard = 12
+   
     @IBAction func hardnessSelected(_ sender: UIButton) {
-        indentify(nome: sender.currentTitle!)
+        let hardness = sender.currentTitle
+        print(hardness!)
     }
     
 
-}
-func indentify(nome: String){
-    print(nome)
 }
