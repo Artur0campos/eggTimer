@@ -2,7 +2,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     let eggTimes = ["Soft": 300, "Medium": 420, "Hard": 720]
     
     var seconds = 60
@@ -16,10 +15,11 @@ class ViewController: UIViewController {
         
         print(eggTimes[hardness] ??  "Error")
         
+        timer?.invalidate()
+        
         seconds = eggTimes[hardness] ?? 60
         timerLabel.text = "\(seconds) seconds"
         
-        timer?.invalidate()
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
     }
     
